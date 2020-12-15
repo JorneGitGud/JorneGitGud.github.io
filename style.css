@@ -1,0 +1,279 @@
+html {
+  --scrollbarBG: #CFD8DC;
+  --thumbBG: #90A4AE;
+}
+body::-webkit-scrollbar {
+  width: 11px;
+}
+body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+body::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG) ;
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
+}
+
+
+html {
+  background: lightgrey;
+  overflow: hidden;
+}
+body {
+  height: 100vh;
+  background: whitesmoke;
+  overflow-y: auto;
+  margin: 0 auto;
+  padding: 0rem;
+  font: 100%/1.4 serif;
+  border: 0px solid rgba(0, 0, 0, 0.25)
+}
+p {
+  margin: 0 0 1.5em;
+}
+* {
+  box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+body{
+	padding: 0;
+	margin: 0;
+	height: 100%;
+}
+.Header{
+	background: black;
+}
+
+.HeaderImage{
+	height: 50px;
+}
+.Border{
+	padding: 0%;
+}
+/*div settings*/
+.Black{			
+	width: 100%;
+	background: black;
+	font-family: Andale Mono, Helvetica;
+	height: auto;
+	padding-bottom: 50px;
+}
+.Black2{			
+	width: 100%;
+	background: black;
+	font-family: Andale Mono, Helvetica;
+	height: auto;
+	padding-bottom: 50px;
+	
+	
+}
+.Grey{		
+	width: 100%;
+	background: rgb(225, 225, 225);
+	font-family: Andale Mono, Helvetica;
+	height: auto;
+	padding-bottom: 50px;
+}
+.White{			
+	width: 100%;
+	background: white;
+	font-family: Andale Mono, Helvetica;
+	height: auto;
+	padding-bottom: 50px;
+}
+
+/*Header settings*/
+.H1Blue{
+	color: rgb(36, 127, 255);
+	padding-top: 30px;
+}
+.H1Black{
+	color: black;
+	padding-top: 30px;
+}
+.H1White{
+	color: white;
+	padding-top: 30px;
+}
+.H2Black{
+	color: black;
+	padding-top: 30px;
+}
+.H2White{
+	color: white;
+	padding-top: 30px;
+}
+.H2Blue{
+	color: blue;
+	padding-top: 30px;
+}
+/*Image settings*/
+.ImageLeft{
+	margin: auto;
+	padding-top: 30px;
+	/*		border-style: solid;
+	border-color: red;*/
+	flex: 50%;
+	text-align: center;
+}
+.ImageRight{
+	margin: auto;
+	padding-top: 30px;
+	/*		border-style: solid;
+	border-color: red;*/
+	flex: 50%;
+	text-align: center;	
+}
+.IMG{
+
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 100%;
+}
+
+/*text settings*/
+.TextRight{
+	margin: 10px 10px 0px 10px;
+	/*		border-style: solid;
+	border-color: red;*/
+	padding-right: 5%;
+	padding-left: 5%;
+	flex: 50%;
+	order: 2;
+	text-align: center;
+}
+.TextLeft{
+	margin: 10px 10px 0px 10px;
+	/*		border-style: solid;
+	border-color: red;*/
+	padding-left: 5%;
+	padding-right: 5%;
+	flex: 50%;
+	order: 2; 
+	text-align: center;
+}
+
+.button {
+	background-color: rgb(36, 127, 255); 
+	border: none;
+	color: white;
+	padding: 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	border-radius: 45%;
+}
+
+@media screen and (orientation:landscape){
+
+	.Black{			
+		width: 100%;
+		background: black;
+		font-family: Andale Mono, Helvetica;
+		height: 70%;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		align-items: center;
+		justify-content: center;
+		min-height: 550px;
+	}
+	.Black :nth-child(1){ order: 1 }
+	.Black :nth-child(2){ order: 2 }
+
+	.Black h1{
+		text-align: left;
+	}
+	.Black h3{
+		text-align: left;
+	}
+
+	.White{			
+		width: 100%;
+		background: white;
+		font-family: Andale Mono, Helvetica;
+		height: 70%;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		align-items: center;
+		justify-content: center;
+		min-height: 550px;
+	}
+
+	.White :nth-child(1){ order: 2 }
+	.White :nth-child(2){ order: 1 }
+
+	.White h1{
+		text-align: right;
+	}
+	.White h3{
+		text-align: right;
+	}
+
+
+
+	.Grey{		
+		width: 100%;
+		background: rgb(225, 225, 225);
+		font-family: Andale Mono, Helvetica;
+		height: 70%;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		align-items: center;
+		justify-content: center;
+		min-height: 550px;
+	}
+	.Grey :nth-child(1){ order: 1 }
+	.Grey :nth-child(2){ order: 2 }
+
+	.Grey h1{
+		text-align: left;
+	}
+	.Grey h3{
+		text-align: left;
+	}
+
+
+	.Black2{			
+		width: 100%;
+		background: black;
+		font-family: Andale Mono, Helvetica;
+		height: 70%;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		align-items: center;
+		justify-content: center;
+		min-height: 550px;
+	}
+	.Black2 :nth-child(1){ order: 2 }
+	.Black2 :nth-child(2){ order: 1 }
+
+	.Black2 h1{
+		text-align: right;
+	}
+	.Black2 h3{
+		text-align: right;
+	}
+
+	.PaddingRight{
+		margin:0% 20% 0% 20%;
+	}
+	.PaddingLeft{
+			margin:0% 20% 0% 20%;
+	}
+}
