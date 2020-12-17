@@ -261,17 +261,14 @@ body {
 /** For tablet devices **/
 
 @media (min-width: 768px) and (max-width: 1023px) {
-    .custom-shape-divider-bottom-1608142741 svg {
-        width: calc(200% + 1.3px);
-        height: 300px;
-    }
     .black-col {
         max-width: 100%;
         width: clamp(300px, 50vw, 600px);
-        padding: 5;
+        padding: 0;
     }
     .xaleste-img {
         display: flex;
+        width: 100%;
         /* shoud load small picture */
     }
 }
@@ -290,13 +287,13 @@ body {
     .black-col {
         max-width: 100%;
         width: clamp(300px, 50vw, 600px);
-        padding: 0;
     }
     .header a {
         font-size: 1rem;
     }
     .xaleste-img {
         display: flex;
+        width: 100%;
         /* shoud load small picture */
     }
     .menu-btn {
