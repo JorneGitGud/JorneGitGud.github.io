@@ -9,7 +9,7 @@
     
     body {
         font-family: monospace, sans-serif;
-        background-color: #111111;
+        background-color: black;
     }
     /* header */
     
@@ -203,6 +203,11 @@
     .desktop-image {
         width: clamp(250px, 30vw, 500px);
     }
+    /*     
+    .desktop-gallery-image {
+        width: clamp(300px, 40vw, 400px);
+        height: auto;
+    } */
     /*Sections*/
     
     .section {
