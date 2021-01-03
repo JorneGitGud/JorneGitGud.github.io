@@ -11,6 +11,13 @@
         font-family: monospace, sans-serif;
         background-color: black;
     }
+
+    .showOnMobile{
+        display : none;
+    }
+    .showOnDesktop{
+        display : true;
+    }
     /* header */
     
     .header {
@@ -103,16 +110,7 @@
         transform: rotate(-45deg) translate(-1.5rem, -1.5rem);
         background-color: #ffffff;
     }
-    /* site buttons */
-    /* body {
-        margin: 0;
-        height: 100%;
-        background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
-    } */
-    
+   
     .button_container {
         position: absolute;
         left: 0;
@@ -187,6 +185,14 @@
         color: rgb(194, 56, 56);
         font-size: 25px;
     }
+
+
+    .gallery-button{
+        border: 0; 
+        background-color: black; 
+        outline:none;
+    
+    }
     /*image*/
     
     .mobile-image {
@@ -203,13 +209,11 @@
     .desktop-image {
         width: clamp(250px, 30vw, 500px);
     }
-    /*     
-    .desktop-gallery-image {
-        width: clamp(300px, 40vw, 400px);
-        height: auto;
-    } */
-    /*Sections*/
-    
+
+
+
+    /* sections */
+
     .section {
         position: relative;
         height: 100vh;
@@ -321,15 +325,25 @@
     /** For tablet devices **/
     
     @media (min-width: 768px) and (max-width: 1023px) {
+        
         .col {
             max-width: 100%;
             width: clamp(300px, 50vw, 600px);
-            padding: 0;
+            padding: clamp(10px, 1rem, 10rem); //testing!!! remove if shit gets wierd
         }
     }
     /** For mobile devices **/
     
     @media (max-width: 767px) {
+
+        .showOnMobile{
+            display : flex;
+        }
+        .showOnDesktop{
+            display : none;
+        }
+
+
         .section {
             flex-direction: column;
             width: 100%;

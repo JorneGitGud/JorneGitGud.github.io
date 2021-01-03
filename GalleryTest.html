@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
+    <!-- vue setup -->
+    <script src="https://unpkg.com/vue@3.0.2"></script>
+
     <title>JorneGitGud</title>
 
 </head>
@@ -25,167 +28,32 @@
         </ul>
     </header>
 
+    <div id="frame">
+        <section class="section black-section">
+            <button v-if="slide > 0" class="showOnDesktop gallery-button" v-on:click="nextImage(false)"><img src="Assets/previousButton.gif" alt="previousButton" ></button>
+            <div class="col">
+                <p><i>  {{date}}    </i>
+                    <h2> {{title}} </h2>
+                </p>
+                <img v-bind:src="image" class="mobile-image" />
+                <p> {{text}} </p>
+                <br>
+            </div>
+            <div class="col">
+                <img v-bind:src="image" alt="social image" class="desktop-image" />
+            </div>
+            <div style="display:flex; flex-direction: row; ">
+                <button class="showOnMobile gallery-button" v-if="slide > 0" v-on:click="nextImage(false)"><img src="Assets/previousButton.gif" alt="previousButton"></button>
 
-    <section class="section blue-section">
-        <div class="col mobile-top-spacing">
-            <p>
-                <h1>Art</h1>
-                <h2>Gallery</h2>
-            </p>
-
-        </div>
-
-        <!-- could add divider -->
-    </section>
-
-    <section class="section black-section">
-        <div class="col mobile-top-spacing">
-            <p><i>6-2020:</i>
-                <h2>Color</h2>
-            </p>
-            <a href="Assets/Gallery/Leaf.png">
-                <img src="Assets/Gallery/Leaf.png" alt="social image" class="mobile-image" />
-            </a>
-            <p>
-                Creating a harmonious palette is the foundation to beautiful art. This piece was made for a uni-project, where a ladybug would move on a grid and eat all the lice that where spawned. The huge pixels in the back correspond with the grid the ladybug moves
-                on.
-            </p>
-            <br>
-            <p>Here is a link to the project.</p>
-            <br>
-            <p>
-                <a href="#" style="text-decoration: none;">
-                    <button class="btn"><span>Bug Game</span></button>
-                    <p class="link"></p>
-                </a>
-            </p>
-        </div>
-        <div class="col">
-            <a href="Assets/Gallery/Leaf.png">
-                <img src="Assets/Gallery/Leaf.png" alt="social image" class="desktop-image" />
-            </a>
-        </div>
-        <!-- could add divider -->
-    </section>
+                <button v-on:click="nextImage(true)" class="gallery-button"><img src="Assets/nextButton.gif" alt="nextButton"></button>
+            </div>
+            <!-- could add divider -->
+        </section>
 
 
-    <section class="section black-section">
-        <div class="col mobile-top-spacing">
-            <p><i>9-2020:</i>
-                <h2>Composition</h2>
-            </p>
-            <a href="Assets/Gallery/ForestTempleOnTop.png">
-                <img src="Assets/Gallery/ForestTempleOnTopMobile.png" alt="social image" class="mobile-image" />
-            </a>
-            <p>Composition might be at it's most difficult when designing levels. The canvas always moves with the player and every point of view must be taken into account. This piece is an unfinished stage for my Artemis RPG.</p>
-            <br>
-            <p>Here's a link to the project.</p>
-            <br>
-            <p>
-                <a href="#" style="text-decoration: none;">
-                    <button class="btn"><span>Artemis</span></button>
-                    <p class="link"></p>
-                </a>
-            </p>
-        </div>
-        <div class="col">
-            <a href="Assets/Gallery/ForestTempleOnTop.png">
-                <img src="Assets/Gallery/ForestTempleOnTop.png" alt="social image" class="desktop-image" />
-            </a>
-        </div>
-        <!-- could add divider -->
-    </section>
+    </div>
 
-    <section class="section black-section">
-        <div class="col mobile-top-spacing">
-            <p><i>9-2020:</i>
-                <h2>Study into light</h2>
-            </p>
-            <a href="Assets/Gallery/Corridor Lightning study.png">
-                <img src="Assets/Gallery/Corridor Lightning study.png" alt="social image" class="mobile-image" />
-            </a>
-            <p>To make art really come alive you need lighting and shading. The walls in this piece might be made out of simple grey clay, that monotony is broken when light coming through the windows hits and a range of colors appear.</p>
-            <br>
-            <p>For this peace is greatly inspired by 19th-century painter, Francois Marius Granet.</p>
-
-            <!-- <p>
-                <a href="#" style="text-decoration: none;">
-                    <button class="btn"><span>Read more</span></button>
-                    <p class="link"></p>
-                </a>
-            </p> -->
-        </div>
-        <div class="col">
-            <a href="Assets/Gallery/Corridor Lightning study.png">
-                <img src="Assets/Gallery/Corridor Lightning study.png" alt="social image" class="desktop-image" />
-            </a>
-        </div>
-        <!-- could add divider -->
-    </section>
-    <section class="section black-section">
-        <div class="col mobile-top-spacing">
-            <p><i>11-2020:</i>
-                <h2>Low frame rate</h2>
-            </p>
-            <a href="Assets/Gallery/XAlesteMenu.gif">
-                <img src="Assets/Gallery/XAlesteMenu.gif" alt="social image" class="mobile-image" />
-            </a>
-            <p>XAleste is now in alpha stage. A small team of users have started testing. Their feedback will help shape the game. Usefull <i>features requests</i> and <i> bug reports </i> will be logged and placed on the backlog.</p>
-            <br>
-            <p>Have a look at the XAleste page, for info and sign-up for alpha testing.</p>
-            <br>
-            <p>
-                <a href="#" style="text-decoration: none;">
-                    <button class="btn"><span>XAleste</span></button>
-                    <p class="link"></p>
-                </a>
-            </p>
-        </div>
-        <div class="col">
-            <a href="Assets/Gallery/XAlesteMenu.gif">
-                <img src="Assets/Gallery/XAlesteMenu.gif" alt="social image" class="desktop-image" />
-            </a>
-        </div>
-        <!-- could add divider -->
-    </section>
-
-    <section class="section black-section">
-        <div class="col mobile-top-spacing">
-            <p>
-                Galaxy quest project, Menu screen.
-            </p>
-            <br>
-            <a href="Assets/Gallery/GalaxyMenu.gif">
-                <img src="Assets/Gallery/GalaxyMenu.gif" alt="social image" class="all-size-image" />
-            </a>
-        </div>
-        <!-- could add divider -->
-    </section>
-
-    <section class="section black-section">
-        <div class="col mobile-top-spacing">
-            <p>
-                Galaxy quest project, Level.
-            </p>
-            <br>
-            <a href="Assets/Gallery/Galaxy.gif">
-                <img src="Assets/Gallery/Galaxy.gif" alt="social image" class="all-size-image" />
-            </a>
-        </div>
-        <!-- could add divider -->
-    </section>
-    <section class="section black-section">
-        <div class="col mobile-top-spacing">
-            <p>
-                Artemis, Asylum graaslands level.
-            </p>
-            <br>
-            <a href="Assets/Gallery/ForestHubAsylum.gif">
-                <img src="Assets/Gallery/ForestHubAsylum.gif" alt="social image" class="all-size-image" />
-            </a>
-        </div>
-        <!-- could add divider -->
-    </section>
+    <script src="ImageFrame.js"></script>
 </body>
 
 </html>
