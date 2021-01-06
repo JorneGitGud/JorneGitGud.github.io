@@ -40,11 +40,13 @@
                 <img v-bind:src="image" class="mobile-image" />
                 <p> {{text}} </p>
                 <br>
+                <p> {{text2}} </p>
+                <br>
             </div>
             <div class="col">
                 <img v-bind:src="image" alt="social image" class="desktop-image" />
             </div>
-            <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+            <div>
                 <button class="showOnMobile gallery-button" v-on:click="nextImage(false)"><img src="Assets/previousButton.gif" alt="previousButton"></button>
 
                 <button v-on:click="nextImage(true)" class="gallery-button"><img src="Assets/nextButton.gif" alt="nextButton"></button>

@@ -191,7 +191,7 @@
         border: 0; 
         background-color: black; 
         outline:none;
-    
+        cursor: pointer;
     }
     /*image*/
     
