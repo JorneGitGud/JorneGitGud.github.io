@@ -1,4 +1,5 @@
     /* globals */
+
     
     @import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Titillium+Web:wght@400;700&display=swap");
     * {
@@ -150,7 +151,10 @@
     .black-text {
         color: rgb(0, 0, 0);
     }
-    
+    .blue-text{
+        color: #259ae9;
+        font-size: 1.3rem;
+    }
     .btn span {
         position: relative;
         z-index: 1;
@@ -194,7 +198,20 @@
         cursor: pointer;
     }
     /*image*/
-    
+    .thumbnail{
+        width: 20%;
+        height: auto;
+    }
+    .thumbnail:hover {
+        position:relative;
+        top:-25px;
+        left:-35px;
+        width: 60%;
+        height:auto;
+        display:block;
+        z-index:999;
+    }
+
     .mobile-image {
         display: none;
         max-width: 100%;
@@ -308,6 +325,12 @@
         color: #259ae9;
     }
     /* _________________ */
+    .black-section h3{
+        padding-top: 1rem;
+        font-size: 1.5rem;
+        color: white;
+    }
+    /* _________________ */
     
     .section p {}
     
@@ -355,7 +378,7 @@
             width: clamp(300px, 50vw, 600px);
         }
         .mobile-top-spacing {
-            padding-top: 10rem;
+            padding-top: 5rem;
         }
         .header a {
             font-size: 1rem;

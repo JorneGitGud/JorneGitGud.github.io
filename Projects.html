@@ -6,9 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
-    <!-- vue setup -->
-    <script src="https://unpkg.com/vue@3.0.2"></script>
-
     <title>JorneGitGud</title>
 
 </head>
@@ -25,39 +22,32 @@
             <li><a href="About.html" class="menu-item">About</a></li>
             <li><a href="XAleste.html" class="menu-item">XAleste</a></li>
             <li><a href="Gallery.html" class="menu-item">Gallery</a></li>
-            <li><a href="#" class="menu-item">JorneGitHub</a></li>
+            <li><a href="https://github.com/JorneGitGud/" class="menu-item">JorneGitHub</a></li>
         </ul>
     </header>
+    <section class="section black-section">
+        <div class="col mobile-top-spacing">
+            <br>
+            <h1>UAP-</h1>
+            <h2>meter</h2>
+                        <br>
+            <img src="Assets/Desk.png" alt="social image" class="mobile-image" />
+            <p>This <i class="blue-text">uni-project</i> aims to help employees and costumers keep a safe distance form one another.</p>
+            <p> It features an User application for general settings and can give helpfull insights into unsafe encouters</p>
+            
+            <a a href="https://view.genial.ly/5fbe8c3a81188c0d4057f4bc/presentation-the-presentation" style="text-decoration: none;">
+                <button class="btn"><span>Presentation</span></button>
+                <p class="link"></p>
+            </a>    
+        </div>
+        <div class="col">
+            <img src="Assets/Desk.png" alt="social image" class="desktop-image" />
+        </div>
 
-    <div id="frame">
-        <section class="section black-section">
-            <button class="showOnDesktop gallery-button" v-on:click="nextImage(false)"><img src="Assets/previousButton.gif" alt="previousButton" ></button>
-            <div class="col">
-                <p>
-                    <h1> {{title}} </h1>
-                    <h2> {{title2}} </h2>
-                </p>
-                <img v-bind:src="image" class="mobile-image" />
-                <p> {{text}} </p>
-                <br>
-                <p> {{text2}} </p>
-                <br>
-            </div>
-            <div class="col">
-                <img v-bind:src="image" alt="social image" class="desktop-image" />
-            </div>
-            <div>
-                <button class="showOnMobile gallery-button" v-on:click="nextImage(false)"><img src="Assets/previousButton.gif" alt="previousButton"></button>
+        
 
-                <button v-on:click="nextImage(true)" class="gallery-button"><img src="Assets/nextButton.gif" alt="nextButton"></button>
-            </div>
-            <!-- could add divider -->
-        </section>
-
-
-    </div>
-
-    <script src="ImageFrame.js"></script>
+        <!-- could add divider -->
+    
 </body>
 
 </html>
