@@ -7,7 +7,9 @@
         padding: 0;
         box-sizing: border-box;
     }
-    
+    space{
+        padding: 2rem;
+    }    
     body {
         font-family: monospace, sans-serif;
         background-color: black;
@@ -241,6 +243,11 @@
         align-items: center;
         padding-left: 0.5rem;
     }
+    .short{
+        margin-top: 5vh;
+        height: 90vh;
+        min-height: 400px;        
+    }
     
     .section p {
         font-size: 1.05rem;
@@ -373,6 +380,16 @@
             padding-left: 0;
             /* width: clamp(300px, 50vw, 600px); */
         }
+        .short {
+            height: 100vh;
+            min-height: 700px; 
+        }
+        .long{
+            height: 200vh;
+            min-height: 1000px;
+        }
+
+
         .col {
             max-width: 100%;
             width: clamp(300px, 50vw, 600px);
