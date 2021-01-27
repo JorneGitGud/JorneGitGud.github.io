@@ -381,12 +381,16 @@
             /* width: clamp(300px, 50vw, 600px); */
         }
         .short {
-            height: 100vh;
+            height: 90vh;
             min-height: 700px; 
         }
         .long{
             height: 200vh;
             min-height: 1000px;
+        }
+        .longer{
+            height: 110vh;
+            min-height: 700px;
         }
 
 
