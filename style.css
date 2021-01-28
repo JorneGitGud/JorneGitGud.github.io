@@ -1,5 +1,4 @@
     /* globals */
-
     
     @import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Titillium+Web:wght@400;700&display=swap");
     * {
@@ -7,19 +6,43 @@
         padding: 0;
         box-sizing: border-box;
     }
-    space{
-        padding: 2rem;
-    }    
+    
+    html {
+        --scrollbarBG: rgba(52, 128, 179, 0.089);
+        --thumbBG: #00aaff42;
+    }
+    
+    body::-webkit-scrollbar {
+        width: 11px;
+    }
+    
     body {
+        scrollbar-width: thin;
+        scrollbar-color: var(--thumbBG) var(--scrollbarBG);
         font-family: monospace, sans-serif;
         background-color: black;
     }
-
-    .showOnMobile{
-        display : none;
+    
+    body::-webkit-scrollbar-track {
+        background: var(--scrollbarBG);
     }
-    .showOnDesktop{
-        display : true;
+    
+    body::-webkit-scrollbar-thumb {
+        background-color: var(--thumbBG);
+        border-radius: 6px;
+        border: 3px solid var(--scrollbarBG);
+    }
+    /* body {
+        font-family: monospace, sans-serif;
+        background-color: black;
+    } */
+    
+    .showOnMobile {
+        display: none;
+    }
+    
+    .showOnDesktop {
+        display: true;
     }
     /* header */
     
@@ -113,7 +136,7 @@
         transform: rotate(-45deg) translate(-1.5rem, -1.5rem);
         background-color: #ffffff;
     }
-   
+    
     .button_container {
         position: absolute;
         left: 0;
@@ -153,10 +176,12 @@
     .black-text {
         color: rgb(0, 0, 0);
     }
-    .blue-text{
+    
+    .blue-text {
         color: #259ae9;
         font-size: 1.3rem;
     }
+    
     .btn span {
         position: relative;
         z-index: 1;
@@ -191,29 +216,30 @@
         color: rgb(194, 56, 56);
         font-size: 25px;
     }
-
-
-    .gallery-button{
-        border: 0; 
-        background-color: black; 
-        outline:none;
+    
+    .gallery-button {
+        border: 0;
+        background-color: black;
+        outline: none;
         cursor: pointer;
     }
     /*image*/
-    .thumbnail{
+    
+    .thumbnail {
         width: 20%;
         height: auto;
     }
+    
     .thumbnail:hover {
-        position:relative;
-        top:-25px;
-        left:-35px;
+        position: relative;
+        top: -25px;
+        left: -35px;
         width: 60%;
-        height:auto;
-        display:block;
-        z-index:999;
+        height: auto;
+        display: block;
+        z-index: 999;
     }
-
+    
     .mobile-image {
         display: none;
         max-width: 100%;
@@ -228,11 +254,8 @@
     .desktop-image {
         width: clamp(250px, 30vw, 500px);
     }
-
-
-
     /* sections */
-
+    
     .section {
         position: relative;
         height: 100vh;
@@ -243,10 +266,11 @@
         align-items: center;
         padding-left: 0.5rem;
     }
-    .short{
+    
+    .short {
         margin-top: 5vh;
         height: 90vh;
-        min-height: 400px;        
+        min-height: 400px;
     }
     
     .section p {
@@ -332,7 +356,8 @@
         color: #259ae9;
     }
     /* _________________ */
-    .black-section h3{
+    
+    .black-section h3 {
         padding-top: 1rem;
         font-size: 1.5rem;
         color: white;
@@ -355,25 +380,21 @@
     /** For tablet devices **/
     
     @media (min-width: 768px) and (max-width: 1023px) {
-        
         .col {
             max-width: 100%;
             width: clamp(300px, 50vw, 600px);
-            padding: clamp(10px, 1rem, 10rem); //testing!!! remove if shit gets wierd
+            padding: clamp(10px, 1rem, 10rem);
         }
     }
     /** For mobile devices **/
     
     @media (max-width: 767px) {
-
-        .showOnMobile{
-            display : flex;
+        .showOnMobile {
+            display: flex;
         }
-        .showOnDesktop{
-            display : none;
+        .showOnDesktop {
+            display: none;
         }
-
-
         .section {
             flex-direction: column;
             width: 100%;
@@ -382,18 +403,16 @@
         }
         .short {
             height: 90vh;
-            min-height: 700px; 
+            min-height: 700px;
         }
-        .long{
+        .long {
             height: 200vh;
             min-height: 1000px;
         }
-        .longer{
+        .longer {
             height: 110vh;
             min-height: 700px;
         }
-
-
         .col {
             max-width: 100%;
             width: clamp(300px, 50vw, 600px);
