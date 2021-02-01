@@ -180,6 +180,7 @@
     .blue-text {
         color: #259ae9;
         font-size: 1.3rem;
+        font-weight: bolder;
     }
     
     .btn span {
