@@ -183,6 +183,12 @@
         font-weight: bolder;
     }
     
+    .orange-text {
+        color: #dd8135;
+        font-size: 1.3rem;
+        font-weight: bolder;
+    }
+    
     .btn span {
         position: relative;
         z-index: 1;
